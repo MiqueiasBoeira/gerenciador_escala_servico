@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: escala_servico_user
+      POSTGRES_PASSWORD: '@159Zx357!'
+      POSTGRES_DB: escala_servico_db
+    ports:
+      - "5432:5432"
