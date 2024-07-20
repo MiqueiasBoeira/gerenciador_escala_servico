@@ -19,18 +19,31 @@ def gerar_previsao_servico(request):
     dias = (fim - inicio).days + 1
     for dia in range(dias):
         data_servico = inicio + timedelta(days=dia)
-        if data_servico.weekday() not in (5, 6):  # Evitar fins de semana para este exemplo
-            militares = Militar.objects.filter(status=True).order_by('folga_util')
+        militares = Militar.objects.filter(status=True).order_by('folga_util')
+        if data_servico.weekday() < 5:  # Dias úteis
             for militar in militares:
                 ServicoDiario.objects.create(
                     tipo_escala=militar.tipo_escala,
                     data=data_servico,
                     militar=militar,
                     status=True,
-                    tipo_dia='util' if data_servico.weekday() < 5 else 'nao_util'
+                    tipo_dia='util'
                 )
                 # Atualizar a folga do militar (exemplo simplificado)
                 militar.folga_util = 0
+                militar.save()
+                break  # Atribuir serviço a apenas um militar por dia como exemplo
+        else:  # Dias não úteis
+            for militar in militares:
+                ServicoDiario.objects.create(
+                    tipo_escala=militar.tipo_escala,
+                    data=data_servico,
+                    militar=militar,
+                    status=True,
+                    tipo_dia='nao_util'
+                )
+                # Atualizar a folga do militar (exemplo simplificado)
+                militar.folga_nao_util = 0
                 militar.save()
                 break  # Atribuir serviço a apenas um militar por dia como exemplo
 

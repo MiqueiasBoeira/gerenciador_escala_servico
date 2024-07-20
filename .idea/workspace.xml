@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abac0fb6-eb9b-4475-82b2-5040c901de2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/escala_servico/core/templates/core/visualizar_previsao.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/templates/core/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escala_servico/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
