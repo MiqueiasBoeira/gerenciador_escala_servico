@@ -1,12 +1,7 @@
 from django.contrib import admin
-from .models import Militar, Escala
+from .models import Militar, ServicoDiario, DiaNaoUtil
 
-@admin.register(Militar)
-class MilitarAdmin(admin.ModelAdmin):
-    list_display = ('nome', 'posto', 'data_entrada', 'suspenso_ate')
-    list_filter = ('posto', 'suspenso_ate')
-
-@admin.register(Escala)
-class EscalaAdmin(admin.ModelAdmin):
-    list_display = ('data', 'tipo', 'militar', 'funcao')
-    list_filter = ('tipo', 'funcao')
+# Registrar os modelos para que apareçam na interface de administração
+admin.site.register(Militar)
+admin.site.register(ServicoDiario)
+admin.site.register(DiaNaoUtil)

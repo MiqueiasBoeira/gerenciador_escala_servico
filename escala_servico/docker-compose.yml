@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3.8'
 
 services:
   web:
@@ -17,5 +17,9 @@ services:
       POSTGRES_USER: escala_servico_user
       POSTGRES_PASSWORD: '@159Zx357!'
       POSTGRES_DB: escala_servico_db
-    ports:
-      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/posgresql/data/
+
+volumes:
+  postgres_data:
+

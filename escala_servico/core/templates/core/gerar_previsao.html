@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gerar Previsão de Serviço</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+        }
+        .link {
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .link a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Previsão de Serviço</h1>
+        <p>A previsão de serviço para os próximos 30 dias foi gerada com sucesso.</p>
+        <div class="link">
+            <a href="{% url 'index' %}">Voltar para a Página Inicial</a>
+        </div>
+    </div>
+</body>
+</html>

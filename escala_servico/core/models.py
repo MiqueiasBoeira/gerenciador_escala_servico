@@ -1,32 +1,56 @@
 from django.db import models
 
 class Militar(models.Model):
+    TIPO_ESCALA_CHOICES = [
+        ('Oficial de Dia', 'Oficial de Dia'),
+        ('Adjunto', 'Adjunto ao Oficial de Dia'),
+        ('Comandante da Guarda', 'Comandante da Guarda'),
+        ('Cabo da Guarda', 'Cabo da Guarda'),
+        ('Cabo da Guarda do PNR', 'Cabo da Guarda do PNR'),
+    ]
+
     nome = models.CharField(max_length=100)
-    posto = models.CharField(max_length=50)
+    tipo_escala = models.CharField(max_length=50, choices=TIPO_ESCALA_CHOICES)
+    status = models.BooleanField(default=True)
     data_entrada = models.DateField()
-    suspenso_ate = models.DateField(null=True, blank=True)
+    folga_util = models.IntegerField(default=0)
+    folga_nao_util = models.IntegerField(default=0)
+    indisponibilidades = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return self.nome
 
-FUNCOES_CHOICES = [
-    ('OFICIAL_DIA', 'Oficial de Dia'),
-    ('ADJUNTO_OF_DIA', 'Adjunto ao Oficial de Dia'),
-    ('COMANDANTE_GUARDA', 'Comandante da Guarda'),
-    ('CABO_GUARDA', 'Cabo da Guarda'),
-    ('CABO_GUARDA_PNR', 'Cabo da Guarda do PNR'),
-]
 
-TIPO_ESCALA = [
-    ('preta', 'Preta'),
-    ('vermelha', 'Vermelha'),
-]
+class ServicoDiario(models.Model):
+    TIPO_ESCALA_CHOICES = [
+        ('Oficial de Dia', 'Oficial de Dia'),
+        ('Adjunto', 'Adjunto ao Oficial de Dia'),
+        ('Comandante da Guarda', 'Comandante da Guarda'),
+        ('Cabo da Guarda', 'Cabo da Guarda'),
+        ('Cabo da Guarda do PNR', 'Cabo da Guarda do PNR'),
+    ]
 
-class Escala(models.Model):
+    TIPO_DIA_CHOICES = [
+        ('util', 'Útil'),
+        ('nao_util', 'Não Útil'),
+    ]
+
+    tipo_escala = models.CharField(max_length=50, choices=TIPO_ESCALA_CHOICES)
     data = models.DateField()
-    tipo = models.CharField(max_length=8, choices=TIPO_ESCALA)
     militar = models.ForeignKey(Militar, on_delete=models.CASCADE)
-    funcao = models.CharField(max_length=20, choices=FUNCOES_CHOICES)
+    status = models.BooleanField(default=True)
+    tipo_dia = models.CharField(max_length=10, choices=TIPO_DIA_CHOICES)
+    observacoes = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.data} - {self.militar.nome} - {self.funcao}"
+        return f'{self.data} - {self.tipo_escala} - {self.militar.nome}'
+
+
+
+class DiaNaoUtil(models.Model):
+    data = models.DateField()
+    descricao = models.CharField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return f'{self.data} - {self.descricao}'
+
