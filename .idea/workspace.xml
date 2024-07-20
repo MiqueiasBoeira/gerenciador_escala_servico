@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abac0fb6-eb9b-4475-82b2-5040c901de2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/escala_servico/core/templates/core/gerar_previsao.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escala_servico/core/templates/core/visualizar_previsao.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/populate_db.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/templates/core/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/templates/core/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/escala_servico/core/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/templates/core/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escala_servico/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escala_servico/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/escala_servico/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

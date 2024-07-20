@@ -1,5 +1,5 @@
 from datetime import date, timedelta
-from .models import DiaNaoUtil
+from .models import DiaNaoUtil, Militar
 
 def adicionar_finais_de_semana_e_feriados(inicio, fim):
     dia_atual = inicio
@@ -16,3 +16,10 @@ def adicionar_finais_de_semana_e_feriados(inicio, fim):
             if feriado['data'] == dia_atual:
                 DiaNaoUtil.objects.get_or_create(data=dia_atual, defaults={'descricao': feriado['descricao']})
         dia_atual += timedelta(days=1)
+
+def atualizar_folgas():
+    militares = Militar.objects.all()
+    for militar in militares:
+        militar.folga_util += 1  # Incrementa a folga útil
+        militar.folga_nao_util += 1  # Incrementa a folga não útil
+        militar.save()

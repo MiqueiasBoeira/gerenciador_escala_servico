@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .utils import adicionar_finais_de_semana_e_feriados
+from .utils import adicionar_finais_de_semana_e_feriados, atualizar_folgas
 from .models import Militar, ServicoDiario
 from datetime import date, timedelta
 
@@ -13,6 +13,7 @@ def gerar_previsao_servico(request):
     inicio = date.today()
     fim = inicio + timedelta(days=30)  # Gera previsão para os próximos 30 dias
     adicionar_finais_de_semana_e_feriados(inicio, fim)
+    atualizar_folgas()  # Atualiza as folgas antes de gerar a previsão
 
     # Lógica para gerar a previsão de serviço
     dias = (fim - inicio).days + 1
@@ -34,3 +35,10 @@ def gerar_previsao_servico(request):
                 break  # Atribuir serviço a apenas um militar por dia como exemplo
 
     return render(request, 'core/gerar_previsao.html')
+
+
+def visualizar_previsao(request):
+    inicio = date.today()
+    fim = inicio + timedelta(days=30)
+    previsao = ServicoDiario.objects.filter(data__range=[inicio, fim]).order_by('data', 'tipo_escala')
+    return render(request, 'core/visualizar_previsao.html', {'previsao': previsao})

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Previsão de Serviço</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .link {
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .link a {
+            text-decoration: none;
+            color: #007BFF;
+            font-size: 18px;
+        }
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Previsão de Serviço</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Tipo de Escala</th>
+                    <th>Militar</th>
+                    <th>Tipo de Dia</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for servico in previsao %}
+                    <tr>
+                        <td>{{ servico.data }}</td>
+                        <td>{{ servico.tipo_escala }}</td>
+                        <td>{{ servico.militar.nome }}</td>
+                        <td>{{ servico.tipo_dia }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="link">
+            <a href="{% url 'index' %}">Voltar para a Página Inicial</a>
+        </div>
+    </div>
+</body>
+</html>
