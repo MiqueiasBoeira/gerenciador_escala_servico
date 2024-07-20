@@ -42,9 +42,12 @@
 <body>
     <div class="container">
         <h1>Previsão de Serviço</h1>
-        <p>A previsão de serviço para os próximos 30 dias foi gerada com sucesso.</p>
+        <p>{{ mensagem }}</p>
         <div class="link">
             <a href="{% url 'index' %}">Voltar para a Página Inicial</a>
+        </div>
+        <div class="link">
+            <a href="{% url 'atualizar_previsao_servico' %}">Atualizar Escala de Serviço</a>
         </div>
     </div>
 </body>
