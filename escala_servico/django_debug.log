@@ -1,0 +1,917 @@
+INFO 2024-07-20 22:46:46,465 autoreload Watching for file changes with StatReloader
+DEBUG 2024-07-20 22:46:46,465 autoreload Waiting for apps ready_event.
+DEBUG 2024-07-20 22:46:46,479 autoreload Apps ready_event triggered. Sending autoreload_started signal.
+DEBUG 2024-07-20 22:46:46,492 autoreload Watching dir /app/core/templates with glob **/*.
+DEBUG 2024-07-20 22:46:46,492 autoreload Watching dir /app/locale with glob **/*.mo.
+DEBUG 2024-07-20 22:46:46,492 autoreload Watching dir /app/core/locale with glob **/*.mo.
+DEBUG 2024-07-20 22:46:46,537 utils (0.003) 
+            SELECT c.relname,
+            CASE WHEN c.relispartition THEN 'p' WHEN c.relkind IN ('m', 'v') THEN 'v' ELSE 't' END
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('f', 'm', 'p', 'r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid)
+        ; args=None
+DEBUG 2024-07-20 22:46:46,541 utils (0.000) SELECT "django_migrations"."id", "django_migrations"."app", "django_migrations"."name", "django_migrations"."applied" FROM "django_migrations"; args=()
+DEBUG 2024-07-20 22:46:46,553 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/apps.py first seen with mtime 1721505729.4508631
+DEBUG 2024-07-20 22:46:46,553 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/__init__.py first seen with mtime 1721505729.690859
+DEBUG 2024-07-20 22:46:46,553 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/__init__.py first seen with mtime 1721505729.6788592
+DEBUG 2024-07-20 22:46:46,553 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/sql/subqueries.py first seen with mtime 1721505729.7458582
+DEBUG 2024-07-20 22:46:46,554 autoreload File /app/core/admin.py first seen with mtime 1721511928.765703
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/lib-dynload/select.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638238.0
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/quopri.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/template/defaultfilters.py first seen with mtime 1721505729.769858
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/core/handlers/exception.py first seen with mtime 1721505729.694859
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/http/client.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/views/generic/dates.py first seen with mtime 1721505729.7998574
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/email/parser.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/templatetags/log.py first seen with mtime 1721505729.0348704
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/urls/conf.py first seen with mtime 1721505729.7808576
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/numberformat.py first seen with mtime 1721505729.7908573
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/concurrent/futures/_base.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/views/decorators/common.py first seen with mtime 1721505729.7978573
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/socket.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/http/request.py first seen with mtime 1721505729.7648578
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/lib-dynload/_bisect.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638235.0
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/__init__.py first seen with mtime 1721505729.7208586
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/formsets.py first seen with mtime 1721505729.7488582
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/decorators.py first seen with mtime 1721505729.7858574
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/backends.py first seen with mtime 1721505729.101869
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/storage.py first seen with mtime 1721505729.6928592
+DEBUG 2024-07-20 22:46:46,554 autoreload File /usr/local/lib/python3.9/os.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/hashable.py first seen with mtime 1721505729.7878575
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/functional.py first seen with mtime 1721505729.7878575
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/operations.py first seen with mtime 1721505729.7128587
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/email/mime/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/json.py first seen with mtime 1721505729.7398584
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/html.py first seen with mtime 1721505729.7888575
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/email/_header_value_parser.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/unittest/util.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/filters/right_margin.py first seen with mtime 1721505728.4468803
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/decimal.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/extensions.py first seen with mtime 1721505728.5478787
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/_sitebuiltins.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/operator.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/_psycopg.cpython-39-x86_64-linux-gnu.so first seen with mtime 1721505728.5528786
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/lib-dynload/math.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638234.0
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/models.py first seen with mtime 1721505729.5598614
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/utils.py first seen with mtime 1721505729.7108588
+DEBUG 2024-07-20 22:46:46,555 autoreload File /usr/local/lib/python3.9/pickle.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/security/sessions.py first seen with mtime 1721505729.690859
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/creation.py first seen with mtime 1721505729.7118587
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/core/serializers/__init__.py first seen with mtime 1721505729.7068589
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/conf/global_settings.py first seen with mtime 1721505728.6838763
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/apps.py first seen with mtime 1721505728.812874
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/templatetags/admin_list.py first seen with mtime 1721505729.0338705
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/views/defaults.py first seen with mtime 1721505729.7968574
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/__init__.py first seen with mtime 1721505729.709859
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/lib-dynload/_bz2.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638244.0
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/base.py first seen with mtime 1721505729.7328584
+DEBUG 2024-07-20 22:46:46,556 autoreload File /app/core/utils.py first seen with mtime 1721514988.3583484
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/apps.py first seen with mtime 1721505729.6788592
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/genericpath.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/core/signals.py first seen with mtime 1721505729.6838593
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/core/handlers/__init__.py first seen with mtime 1721505729.693859
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/timesince.py first seen with mtime 1721505729.7928574
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/core/cache/backends/filebased.py first seen with mtime 1721505729.6868591
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/features.py first seen with mtime 1721505729.7218585
+DEBUG 2024-07-20 22:46:46,556 autoreload File /usr/local/lib/python3.9/dis.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/template/backends/base.py first seen with mtime 1721505729.7728577
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/encodings/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/core/paginator.py first seen with mtime 1721505729.6838593
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/_range.py first seen with mtime 1721505728.5528786
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/sql/where.py first seen with mtime 1721505729.7468581
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/template/engine.py first seen with mtime 1721505729.7708578
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/views/generic/base.py first seen with mtime 1721505729.7998574
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/template/backends/django.py first seen with mtime 1721505729.7728577
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/lib-dynload/grp.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638237.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/unittest/main.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/queue.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/reverse_related.py first seen with mtime 1721505729.7418582
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/email/encoders.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/views/__init__.py first seen with mtime 1721505729.0348704
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/copyreg.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/checks.py first seen with mtime 1721505729.1028693
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/middleware.py first seen with mtime 1721505729.5598614
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/lib-dynload/_socket.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638241.0
+DEBUG 2024-07-20 22:46:46,557 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/checks.py first seen with mtime 1721505729.177868
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/engine/grouping.py first seen with mtime 1721505728.4448805
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/json/encoder.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/http/cookie.py first seen with mtime 1721505729.7638578
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/handlers.py first seen with mtime 1721505729.6798594
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/extras.py first seen with mtime 1721505728.5488787
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/utils.py first seen with mtime 1721505729.7498581
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/validation.py first seen with mtime 1721505729.7138588
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/urls/base.py first seen with mtime 1721505729.7808576
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/views/decorators/debug.py first seen with mtime 1721505729.7988572
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/email/feedparser.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/sre_compile.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/asyncio/threads.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/fields.py first seen with mtime 1721505729.1788678
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/signals.py first seen with mtime 1721505729.7108588
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/pprint.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/views/generic/detail.py first seen with mtime 1721505729.7998574
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/renderers.py first seen with mtime 1721505729.7498581
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/__init__.py first seen with mtime 1721505729.177868
+DEBUG 2024-07-20 22:46:46,558 autoreload File /usr/local/lib/python3.9/email/charset.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/templates.py first seen with mtime 1721505729.6888592
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/core/management/commands/__init__.py first seen with mtime 1721505729.699859
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/templatetags/__init__.py first seen with mtime 1721505729.0338705
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/weakref.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/asyncio/locks.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/core/mail/utils.py first seen with mtime 1721505729.695859
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/views/decorators/csrf.py first seen with mtime 1721505729.7978573
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/sre_constants.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/token.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/asyncio/runners.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/email/mime/message.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/template/exceptions.py first seen with mtime 1721505729.7708578
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/enums.py first seen with mtime 1721505729.7348583
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/errors.py first seen with mtime 1721505728.5498786
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/__init__.py first seen with mtime 1721505728.8118742
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/pytz/lazy.py first seen with mtime 1721505728.223884
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/site-packages/django/template/autoreload.py first seen with mtime 1721505729.7688577
+DEBUG 2024-07-20 22:46:46,559 autoreload File /usr/local/lib/python3.9/encodings/utf_8.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/lib-dynload/_blake2.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638243.0
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/urls/converters.py first seen with mtime 1721505729.7808576
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/lib-dynload/_heapq.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638235.0
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/widgets.py first seen with mtime 1721505728.816874
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/template/smartif.py first seen with mtime 1721505729.7718577
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/aggregates.py first seen with mtime 1721505729.7328584
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/core/validators.py first seen with mtime 1721505729.6848593
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/gettext.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,560 autoreload File /app/core/apps.py first seen with mtime 1721484211.4870467
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/core/wsgi.py first seen with mtime 1721505729.6848593
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/log.py first seen with mtime 1721505729.7908573
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/views/debug.py first seen with mtime 1721505729.7958574
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/lib-dynload/_opcode.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638236.0
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/templatetags/admin_urls.py first seen with mtime 1721505729.0338705
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/lib-dynload/_uuid.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638247.0
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/tokens.py first seen with mtime 1721505728.4438806
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/template/loaders/app_directories.py first seen with mtime 1721505729.7748578
+DEBUG 2024-07-20 22:46:46,560 autoreload File /app/escala_servico/urls.py first seen with mtime 1721512599.094095
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/unittest/runner.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/site-packages/django/middleware/__init__.py first seen with mtime 1721505729.765858
+DEBUG 2024-07-20 22:46:46,560 autoreload File /usr/local/lib/python3.9/typing.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/signal.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/django/views/csrf.py first seen with mtime 1721505729.7958574
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/encodings/aliases.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/heapq.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/models.py first seen with mtime 1721505728.8148742
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/django/core/cache/backends/base.py first seen with mtime 1721505729.6858592
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/filters/others.py first seen with mtime 1721505728.4458804
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/django/core/cache/utils.py first seen with mtime 1721505729.6858592
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/deconstruct.py first seen with mtime 1721505729.7858574
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/unittest/suite.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/bisect.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/operations/models.py first seen with mtime 1721505729.7318585
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/exceptions.py first seen with mtime 1721505729.7268586
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/lib-dynload/_sha512.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638242.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/asyncio/base_subprocess.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,561 autoreload File /usr/local/lib/python3.9/wsgiref/simple_server.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/asyncio/base_futures.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/translation.py first seen with mtime 1721505729.6898592
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/template/context.py first seen with mtime 1721505729.7688577
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/asyncio/futures.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/unittest/loader.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/topological_sort.py first seen with mtime 1721505729.7928574
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/template/loaders/filesystem.py first seen with mtime 1721505729.7748578
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/boundfield.py first seen with mtime 1721505729.747858
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/constants.py first seen with mtime 1721505729.4508631
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/helpers.py first seen with mtime 1721505728.8148742
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/decorators.py first seen with mtime 1721505728.8138742
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/lib-dynload/termios.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638243.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/urllib/request.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/features.py first seen with mtime 1721505729.7128587
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/abc.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/lib-dynload/_datetime.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638236.0
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/site-packages/django/db/__init__.py first seen with mtime 1721505729.7088587
+DEBUG 2024-07-20 22:46:46,562 autoreload File /app/escala_servico/settings.py first seen with mtime 1721515605.4536757
+DEBUG 2024-07-20 22:46:46,562 autoreload File /usr/local/lib/python3.9/asyncio/sslproto.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/client.py first seen with mtime 1721505729.7218585
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/views/static.py first seen with mtime 1721505729.7968574
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/core/serializers/python.py first seen with mtime 1721505729.7078588
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/base64.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/core/mail/message.py first seen with mtime 1721505729.695859
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/core/management/color.py first seen with mtime 1721505729.698859
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/wsgiref/headers.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/formatter.py first seen with mtime 1721505728.4428804
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/termcolors.py first seen with mtime 1721505729.7918575
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/wsgiref/util.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/management/__init__.py first seen with mtime 1721505729.233867
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/operations/special.py first seen with mtime 1721505729.7318585
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/lib-dynload/unicodedata.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638238.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/asyncio/log.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/operations/utils.py first seen with mtime 1721505729.7318585
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/utils.py first seen with mtime 1721505729.7378583
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/filters/__init__.py first seen with mtime 1721505728.4448805
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/template/loader_tags.py first seen with mtime 1721505729.7718577
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/storage/__init__.py first seen with mtime 1721505729.4518633
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/uu.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/inspect.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,563 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/messages.py first seen with mtime 1721505729.6888592
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/email/utils.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/http/server.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/secrets.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/schema.py first seen with mtime 1721505729.7228587
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/cgi.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/asgiref/__init__.py first seen with mtime 1721505728.584878
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/template/loaders/__init__.py first seen with mtime 1721505729.7738576
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/core/exceptions.py first seen with mtime 1721505729.6838593
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/core/__init__.py first seen with mtime 1721505729.6828592
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/core/handlers/asgi.py first seen with mtime 1721505729.693859
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/__init__.py first seen with mtime 1721505728.5498786
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/unittest/signals.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/importlib/util.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/templatetags/static.py first seen with mtime 1721505729.7768576
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/views/generic/list.py first seen with mtime 1721505729.8008573
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/pytz/tzfile.py first seen with mtime 1721505728.2248843
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/selectors.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/getpass.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/site-packages/django/core/management/base.py first seen with mtime 1721505729.698859
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/lib-dynload/_queue.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638236.0
+DEBUG 2024-07-20 22:46:46,564 autoreload File /usr/local/lib/python3.9/asyncio/coroutines.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/tempfile.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/urllib/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/templatetags/admin_modify.py first seen with mtime 1721505729.0338705
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/__init__.py first seen with mtime 1721505729.7818575
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/lib-dynload/_posixsubprocess.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638238.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/email/mime/text.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/contextlib.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /app/escala_servico/__init__.py first seen with mtime 1721484174.4161713
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/urllib/parse.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/types.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/site-packages/django/core/signing.py first seen with mtime 1721505729.6838593
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/site-packages/django/urls/utils.py first seen with mtime 1721505729.7818575
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/threading.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/hashlib.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/json/decoder.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/operations/base.py first seen with mtime 1721505729.7308583
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/related_descriptors.py first seen with mtime 1721505729.7408583
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/site-packages/django/http/__init__.py first seen with mtime 1721505729.7638578
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/asyncio/unix_events.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/lzma.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,565 autoreload File /usr/local/lib/python3.9/lib-dynload/binascii.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638244.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/posixpath.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/asyncio/base_events.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/management/commands/__init__.py first seen with mtime 1721505729.6808593
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/signals.py first seen with mtime 1721505729.7378583
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/lib-dynload/_random.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638234.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/_compat_pickle.py first seen with mtime 1720638252.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /app/core/__init__.py first seen with mtime 1721484211.4870467
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/expressions.py first seen with mtime 1721505729.7348583
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/uuid.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/email/_policybase.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/models.py first seen with mtime 1721505729.1048691
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/base.py first seen with mtime 1721505729.7218585
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/lib-dynload/zlib.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638244.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/concurrent/futures/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/hashers.py first seen with mtime 1721505729.1038692
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/models.py first seen with mtime 1721505729.1788678
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/related_lookups.py first seen with mtime 1721505729.7408583
+DEBUG 2024-07-20 22:46:46,566 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/sql/datastructures.py first seen with mtime 1721505729.7448583
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/lib-dynload/fcntl.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638237.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/warnings.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/views.py first seen with mtime 1721505729.179868
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/email/header.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/linecache.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/functions/__init__.py first seen with mtime 1721505729.7418582
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/uploadhandler.py first seen with mtime 1721505729.693859
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/tokens.py first seen with mtime 1721505729.105869
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/timezone.py first seen with mtime 1721505729.7928574
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/gzip.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/bz2.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/management/__init__.py first seen with mtime 1721505729.6808593
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/socketserver.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/dispatch/dispatcher.py first seen with mtime 1721505729.7468581
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/filters/output.py first seen with mtime 1721505728.4458804
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/lib-dynload/_struct.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638234.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/ntpath.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/middleware/cache.py first seen with mtime 1721505729.765858
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/_collections_abc.py first seen with mtime 1720638252.0
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/fields.py first seen with mtime 1721505729.7488582
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/security/csrf.py first seen with mtime 1721505729.690859
+DEBUG 2024-07-20 22:46:46,567 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/itercompat.py first seen with mtime 1721505729.7898574
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/functools.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/query_utils.py first seen with mtime 1721505729.7378583
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/ssl.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/forms.py first seen with mtime 1721505729.1038692
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/html/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/__init__.py first seen with mtime 1721505729.747858
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/email/iterators.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/enum.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/forms.py first seen with mtime 1721505729.1788678
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/__init__.py first seen with mtime 1721505729.5588615
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/email/quoprimime.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/filters.py first seen with mtime 1721505728.8138742
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638236.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/inspect.py first seen with mtime 1721505729.7888575
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/translation/trans_real.py first seen with mtime 1721505729.7948573
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/move.py first seen with mtime 1721505729.691859
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/middleware.py first seen with mtime 1721505729.1038692
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/core/serializers/base.py first seen with mtime 1721505729.7068589
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/__init__.py first seen with mtime 1721505729.7388582
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/asyncio/exceptions.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,568 autoreload File /usr/local/lib/python3.9/asyncio/__init__.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/shutil.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/constraints.py first seen with mtime 1721505729.7338583
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/engine/__init__.py first seen with mtime 1721505728.4438806
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/asyncio/tasks.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/json/scanner.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/password_validation.py first seen with mtime 1721505729.1048691
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/core/mail/__init__.py first seen with mtime 1721505729.694859
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/_os.py first seen with mtime 1721505729.7828577
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/core/handlers/base.py first seen with mtime 1721505729.694859
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/email/errors.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/backends/__init__.py first seen with mtime 1721505729.5608613
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/email/policy.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sites/shortcuts.py first seen with mtime 1721505729.6228602
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/client.py first seen with mtime 1721505729.7118587
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/views/decorators/__init__.py first seen with mtime 1721505729.7968574
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/filters/reindent.py first seen with mtime 1721505728.4468803
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/urllib/error.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/asyncio/subprocess.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/lexer.py first seen with mtime 1721505728.4428804
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/datastructures.py first seen with mtime 1721505729.7848575
+DEBUG 2024-07-20 22:46:46,569 autoreload File /usr/local/lib/python3.9/json/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/logging/config.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/errorcodes.py first seen with mtime 1721505728.5478787
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/introspection.py first seen with mtime 1721505729.7228587
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/security/base.py first seen with mtime 1721505729.690859
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/email/base64mime.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/__init__.py first seen with mtime 1721505729.7108588
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/core/servers/__init__.py first seen with mtime 1721505729.7088587
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/_bootlocale.py first seen with mtime 1720638252.0
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/core/cache/backends/locmem.py first seen with mtime 1721505729.6868591
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/pytz/exceptions.py first seen with mtime 1721505728.223884
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/pytz/__init__.py first seen with mtime 1721505728.223884
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/unittest/result.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/creation.py first seen with mtime 1721505729.7218585
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/_json.py first seen with mtime 1721505728.5488787
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/copy.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/dateformat.py first seen with mtime 1721505729.7848575
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/database.py first seen with mtime 1721505729.6878593
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/urls.py first seen with mtime 1721505729.6898592
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/indexes.py first seen with mtime 1721505729.7348583
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/_compression.py first seen with mtime 1720638252.0
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/asgiref/sync.py first seen with mtime 1721505728.5858781
+DEBUG 2024-07-20 22:46:46,570 autoreload File /usr/local/lib/python3.9/site-packages/django/middleware/csrf.py first seen with mtime 1721505729.7668579
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/templatetags/base.py first seen with mtime 1721505729.0348704
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/apps.py first seen with mtime 1721505729.5588615
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/deprecation.py first seen with mtime 1721505729.7868574
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/asgiref/current_thread_executor.py first seen with mtime 1721505728.584878
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/asyncio/format_helpers.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/views.py first seen with mtime 1721505729.6808593
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/template/base.py first seen with mtime 1721505729.7688577
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/db/transaction.py first seen with mtime 1721505729.709859
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/core/cache/__init__.py first seen with mtime 1721505729.6848593
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/subprocess.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/cache.py first seen with mtime 1721505729.7838576
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/pytz/tzinfo.py first seen with mtime 1721505728.2248843
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/site-packages/django/views/__init__.py first seen with mtime 1721505729.7958574
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/re.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/importlib/__init__.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,571 autoreload File /usr/local/lib/python3.9/asyncio/constants.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/state.py first seen with mtime 1721505729.7298584
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/sql/__init__.py first seen with mtime 1721505729.7438583
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/base_session.py first seen with mtime 1721505729.5598614
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/management/__init__.py first seen with mtime 1721505729.172868
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/utils.py first seen with mtime 1721505728.4438806
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/apps/config.py first seen with mtime 1721505728.6828763
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/formats.py first seen with mtime 1721505729.7878575
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/unittest/__init__.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/concurrent/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/sites.py first seen with mtime 1721505728.815874
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/views/main.py first seen with mtime 1721505729.0358703
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/email/mime/nonmultipart.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/crypto.py first seen with mtime 1721505729.7848575
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/psycopg2/_ipaddress.py first seen with mtime 1721505728.5498786
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/shortcuts.py first seen with mtime 1721505728.6818764
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/calendar.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/asyncio/events.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/core/serializers/json.py first seen with mtime 1721505729.7068589
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/safestring.py first seen with mtime 1721505729.7918575
+DEBUG 2024-07-20 22:46:46,572 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/mixins.py first seen with mtime 1721505729.7398584
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/filters/tokens.py first seen with mtime 1721505728.4468803
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/utils.py first seen with mtime 1721505728.816874
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/asyncio.py first seen with mtime 1721505729.7828577
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/unittest/case.py first seen with mtime 1720638256.0
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/asyncio/staggered.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/templatetags/__init__.py first seen with mtime 1721505729.7758577
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/actions.py first seen with mtime 1721505728.812874
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/asyncio/queues.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/options.py first seen with mtime 1721505729.7368584
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/urls/resolvers.py first seen with mtime 1721505729.7818575
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/proxy.py first seen with mtime 1721505729.7398584
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/keyword.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/template/response.py first seen with mtime 1721505729.7718577
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/utils.py first seen with mtime 1721505729.6808593
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/operations/fields.py first seen with mtime 1721505729.7308583
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/conf/urls/__init__.py first seen with mtime 1721505728.8108742
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/locks.py first seen with mtime 1721505729.691859
+DEBUG 2024-07-20 22:46:46,573 autoreload File /usr/local/lib/python3.9/site-packages/asgiref/local.py first seen with mtime 1721505728.584878
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/views/generic/edit.py first seen with mtime 1721505729.8008573
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/importlib/abc.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/email/contentmanager.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/filters/aligned_indent.py first seen with mtime 1721505728.4458804
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/lib-dynload/_contextvars.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638233.0
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/operations/__init__.py first seen with mtime 1721505729.7308583
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/functions/window.py first seen with mtime 1721505729.7438583
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/__init__.py first seen with mtime 1721505729.7328584
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/api.py first seen with mtime 1721505729.4508631
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/email/_encoded_words.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/dispatch/__init__.py first seen with mtime 1721505729.7468581
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/dates.py first seen with mtime 1721505729.7858574
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/email/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/datetime.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/difflib.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/templatetags/i18n.py first seen with mtime 1721505729.7758577
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/typing_extensions.py first seen with mtime 1721505728.410881
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/migration.py first seen with mtime 1721505729.7278585
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/site-packages/django/conf/__init__.py first seen with mtime 1721505728.6838763
+DEBUG 2024-07-20 22:46:46,574 autoreload File /usr/local/lib/python3.9/argparse.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/template/backends/__init__.py first seen with mtime 1721505729.7728577
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/numbers.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/validators.py first seen with mtime 1721505729.105869
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/core/management/commands/runserver.py first seen with mtime 1721505729.7038589
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/widgets.py first seen with mtime 1721505729.750858
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/views/generic/__init__.py first seen with mtime 1721505729.7988572
+DEBUG 2024-07-20 22:46:46,575 autoreload File /app/core/models.py first seen with mtime 1721510955.121953
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/autoreload.py first seen with mtime 1721505729.7838576
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/http/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/sql/constants.py first seen with mtime 1721505729.7448583
+DEBUG 2024-07-20 22:46:46,575 autoreload File /app/core/views.py first seen with mtime 1721515123.6661766
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/base.py first seen with mtime 1721505729.691859
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/__init__.py first seen with mtime 1721505729.6878593
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/templatetags/tz.py first seen with mtime 1721505729.7768576
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/ipv6.py first seen with mtime 1721505729.7898574
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/wsgiref/handlers.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/template/defaulttags.py first seen with mtime 1721505729.769858
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/text.py first seen with mtime 1721505729.7928574
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/admin.py first seen with mtime 1721505729.101869
+DEBUG 2024-07-20 22:46:46,575 autoreload File /usr/local/lib/python3.9/site-packages/django/urls/exceptions.py first seen with mtime 1721505729.7818575
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/urls/__init__.py first seen with mtime 1721505729.7808576
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/views/autocomplete.py first seen with mtime 1721505729.0348704
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/admin.py first seen with mtime 1721505729.177868
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/views/decorators/cache.py first seen with mtime 1721505729.7978573
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/introspection.py first seen with mtime 1721505729.7128587
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/deletion.py first seen with mtime 1721505729.7338583
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/platform.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/connection.py first seen with mtime 1721505729.7838576
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/email/generator.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/models.py first seen with mtime 1721505729.7498581
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sites/__init__.py first seen with mtime 1721505729.6208603
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/related.py first seen with mtime 1721505729.7408583
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/sql/query.py first seen with mtime 1721505729.7458582
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/template/loaders/base.py first seen with mtime 1721505729.7748578
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/asyncio/trsock.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/opcode.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/codecs.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/lib-dynload/array.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638234.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/email/mime/base.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,576 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/images.py first seen with mtime 1721505729.691859
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/mimetypes.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/lookups.py first seen with mtime 1721505729.7358584
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/baseconv.py first seen with mtime 1721505729.7838576
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/_weakrefset.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/lorem_ipsum.py first seen with mtime 1721505729.7908573
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/html/entities.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/pathlib.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/registry.py first seen with mtime 1721505729.6888592
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/model_checks.py first seen with mtime 1721505729.6888592
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/random.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/finders.py first seen with mtime 1721505729.6788592
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/constants.py first seen with mtime 1721505729.7338583
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/hmac.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/forms/forms.py first seen with mtime 1721505729.7488582
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/functions/text.py first seen with mtime 1721505729.7428582
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/datetime_safe.py first seen with mtime 1721505729.7858574
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/translation/reloader.py first seen with mtime 1721505729.7948573
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/html/parser.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/email/headerregistry.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/logging/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/string.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,577 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/cli.py first seen with mtime 1721505728.4418805
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/lib-dynload/_decimal.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638252.0
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/security/__init__.py first seen with mtime 1721505729.6898592
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/sre_parse.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/struct.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/temp.py first seen with mtime 1721505729.6928592
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/base_user.py first seen with mtime 1721505729.101869
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/reprlib.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/email/message.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/glob.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/manager.py first seen with mtime 1721505729.7358584
+DEBUG 2024-07-20 22:46:46,578 autoreload File /usr/local/lib/python3.9/importlib/machinery.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/query.py first seen with mtime 1721505729.7368584
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/engine/filter_stack.py first seen with mtime 1721505728.4448805
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/version.py first seen with mtime 1721505729.7938573
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/middleware/security.py first seen with mtime 1721505729.7678578
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/ddl_references.py first seen with mtime 1721505729.7108588
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/postgresql/operations.py first seen with mtime 1721505729.7228587
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/__init__.py first seen with mtime 1721505729.1008692
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/io.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/pkgutil.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/core/cache/backends/__init__.py first seen with mtime 1721505729.6858592
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/template/utils.py first seen with mtime 1721505729.7728577
+DEBUG 2024-07-20 22:46:46,579 autoreload File /usr/local/lib/python3.9/site-packages/django/templatetags/l10n.py first seen with mtime 1721505729.7768576
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/asyncio/selector_events.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/urllib/response.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/concurrent/futures/thread.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/django/template/loader.py first seen with mtime 1721505729.7718577
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/tree.py first seen with mtime 1721505729.7938573
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/keywords.py first seen with mtime 1721505728.4428804
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/django/templatetags/cache.py first seen with mtime 1721505729.7758577
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/module_loading.py first seen with mtime 1721505729.7908573
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/collections/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/django/template/__init__.py first seen with mtime 1721505729.7678578
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/ast.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/django/__init__.py first seen with mtime 1721505728.6818764
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/schema.py first seen with mtime 1721505729.7138588
+DEBUG 2024-07-20 22:46:46,580 autoreload File /usr/local/lib/python3.9/email/mime/multipart.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/apps/__init__.py first seen with mtime 1721505728.6828763
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/email/_parseaddr.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/__init__.py first seen with mtime 1721505729.4498632
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/http/response.py first seen with mtime 1721505729.765858
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/_markupbase.py first seen with mtime 1720638252.0
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/tokenize.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/http.py first seen with mtime 1721505729.7888575
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/functions/datetime.py first seen with mtime 1721505729.7428582
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/caches.py first seen with mtime 1721505729.6878593
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/wsgiref/__init__.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/signals.py first seen with mtime 1721505729.105869
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/core/checks/async_checks.py first seen with mtime 1721505729.6878593
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/functions/mixins.py first seen with mtime 1721505729.7428582
+DEBUG 2024-07-20 22:46:46,581 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/encoding.py first seen with mtime 1721505729.7868574
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/translation/__init__.py first seen with mtime 1721505729.7938573
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/lib-dynload/_ssl.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638242.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/lib-dynload/_lzma.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638245.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/fnmatch.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/engine/statement_splitter.py first seen with mtime 1721505728.4448805
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/site-packages/django/conf/locale/__init__.py first seen with mtime 1721505728.6858764
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/lib-dynload/_hashlib.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638241.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/http/cookies.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/contextvars.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/collections/abc.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/asyncio/streams.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/regex_helper.py first seen with mtime 1721505729.7918575
+DEBUG 2024-07-20 22:46:46,582 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/functions/comparison.py first seen with mtime 1721505729.7418582
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/asyncio/base_tasks.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/asyncio/transports.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/duration.py first seen with mtime 1721505729.7868574
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/functions/math.py first seen with mtime 1721505729.7428582
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/apps/registry.py first seen with mtime 1721505728.6828763
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/locale.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/http/multipartparser.py first seen with mtime 1721505729.7648578
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/utils.py first seen with mtime 1721505729.7298584
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/logging/handlers.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,583 autoreload File /app/manage.py first seen with mtime 1721484174.4151714
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/options.py first seen with mtime 1721505728.815874
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/checks.py first seen with mtime 1721505728.812874
+DEBUG 2024-07-20 22:46:46,583 autoreload File /usr/local/lib/python3.9/site-packages/django/template/library.py first seen with mtime 1721505729.7708578
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/lib-dynload/_pickle.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638237.0
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/apps.py first seen with mtime 1721505729.101869
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/__init__.py first seen with mtime 1721505728.4408805
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/exceptions.py first seen with mtime 1721505728.4418805
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/lib-dynload/_asyncio.cpython-39-x86_64-linux-gnu.so first seen with mtime 1720638237.0
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/traceback.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/apps.py first seen with mtime 1721505729.177868
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/management/commands/runserver.py first seen with mtime 1721505729.6818593
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/django/core/servers/basehttp.py first seen with mtime 1721505729.7088587
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/sqlparse/sql.py first seen with mtime 1721505728.4438806
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/django/db/backends/base/base.py first seen with mtime 1721505729.7118587
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/__init__.py first seen with mtime 1721505729.7258584
+DEBUG 2024-07-20 22:46:46,584 autoreload File /usr/local/lib/python3.9/site-packages/django/views/i18n.py first seen with mtime 1721505729.7968574
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/core/management/__init__.py first seen with mtime 1721505729.697859
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/encodings/latin_1.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/staticfiles/checks.py first seen with mtime 1721505729.6788592
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/core/handlers/wsgi.py first seen with mtime 1721505729.694859
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/ipaddress.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,585 autoreload File /app/core/urls.py first seen with mtime 1721514222.4848802
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/utils/dateparse.py first seen with mtime 1721505729.7848575
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/uploadedfile.py first seen with mtime 1721505729.6928592
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/core/files/utils.py first seen with mtime 1721505729.693859
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/stat.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/exceptions.py first seen with mtime 1721505728.8138742
+DEBUG 2024-07-20 22:46:46,585 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/__init__.py first seen with mtime 1721505728.8118742
+DEBUG 2024-07-20 22:46:46,586 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/fields/files.py first seen with mtime 1721505729.7388582
+DEBUG 2024-07-20 22:46:46,586 autoreload File /usr/local/lib/python3.9/site-packages/django/db/utils.py first seen with mtime 1721505729.709859
+DEBUG 2024-07-20 22:46:46,586 autoreload File /usr/local/lib/python3.9/asyncio/protocols.py first seen with mtime 1720638254.0
+DEBUG 2024-07-20 22:46:46,586 autoreload File /app/core/templates/core first seen with mtime 1721514204.6546848
+DEBUG 2024-07-20 22:46:46,586 autoreload File /app/core/templates/core/gerar_previsao.html first seen with mtime 1721514204.6466846
+DEBUG 2024-07-20 22:46:46,586 autoreload File /app/core/templates/core/visualizar_previsao.html first seen with mtime 1721513086.9774082
+DEBUG 2024-07-20 22:46:46,586 autoreload File /app/core/templates/core/index.html first seen with mtime 1721513633.487117
+DEBUG 2024-07-20 22:46:47,620 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/migrations/__init__.py first seen with mtime 1721505728.9808712
+DEBUG 2024-07-20 22:46:47,620 autoreload File /app/core/migrations/0001_initial.py first seen with mtime 1721511521.8487902
+DEBUG 2024-07-20 22:46:47,621 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/migrations/0001_initial.py first seen with mtime 1721505728.9798713
+DEBUG 2024-07-20 22:46:47,621 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0002_alter_permission_name_max_length.py first seen with mtime 1721505729.173868
+DEBUG 2024-07-20 22:46:47,621 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0010_alter_group_name_max_length.py first seen with mtime 1721505729.175868
+DEBUG 2024-07-20 22:46:47,621 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0004_alter_user_username_opts.py first seen with mtime 1721505729.1748679
+DEBUG 2024-07-20 22:46:47,622 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/backends/base.py first seen with mtime 1721505729.5608613
+DEBUG 2024-07-20 22:46:47,622 autoreload File /app/escala_servico/wsgi.py first seen with mtime 1721484174.4161713
+DEBUG 2024-07-20 22:46:47,622 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/graph.py first seen with mtime 1721505729.7278585
+DEBUG 2024-07-20 22:46:47,622 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0008_alter_user_username_max_length.py first seen with mtime 1721505729.175868
+DEBUG 2024-07-20 22:46:47,622 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0006_require_contenttypes_0002.py first seen with mtime 1721505729.1748679
+DEBUG 2024-07-20 22:46:47,622 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/migrations/__init__.py first seen with mtime 1721505729.6188602
+DEBUG 2024-07-20 22:46:47,623 autoreload File /usr/local/lib/python3.9/site-packages/django/middleware/common.py first seen with mtime 1721505729.7668579
+DEBUG 2024-07-20 22:46:47,623 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/migrations/0001_initial.py first seen with mtime 1721505729.6188602
+DEBUG 2024-07-20 22:46:47,623 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/migrations/0002_logentry_remove_auto_add.py first seen with mtime 1721505728.9798713
+DEBUG 2024-07-20 22:46:47,623 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0003_alter_user_email_max_length.py first seen with mtime 1721505729.173868
+DEBUG 2024-07-20 22:46:47,623 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/executor.py first seen with mtime 1721505729.7268586
+DEBUG 2024-07-20 22:46:47,623 autoreload File /usr/local/lib/python3.9/site-packages/django/middleware/clickjacking.py first seen with mtime 1721505729.765858
+DEBUG 2024-07-20 22:46:47,624 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/middleware.py first seen with mtime 1721505729.4518633
+DEBUG 2024-07-20 22:46:47,624 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/backends/db.py first seen with mtime 1721505729.5618613
+DEBUG 2024-07-20 22:46:47,624 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0005_alter_user_last_login_null.py first seen with mtime 1721505729.1748679
+DEBUG 2024-07-20 22:46:47,624 autoreload File /usr/local/lib/python3.9/encodings/idna.py first seen with mtime 1720638255.0
+DEBUG 2024-07-20 22:46:47,624 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/migrations/0001_initial.py first seen with mtime 1721505729.233867
+DEBUG 2024-07-20 22:46:47,624 autoreload File /usr/local/lib/python3.9/site-packages/django/db/models/sql/compiler.py first seen with mtime 1721505729.7448583
+DEBUG 2024-07-20 22:46:47,625 autoreload File /usr/local/lib/python3.9/stringprep.py first seen with mtime 1720638253.0
+DEBUG 2024-07-20 22:46:47,625 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0011_update_proxy_permissions.py first seen with mtime 1721505729.175868
+DEBUG 2024-07-20 22:46:47,625 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0001_initial.py first seen with mtime 1721505729.173868
+DEBUG 2024-07-20 22:46:47,625 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0007_alter_validators_add_error_messages.py first seen with mtime 1721505729.1748679
+DEBUG 2024-07-20 22:46:47,625 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/exceptions.py first seen with mtime 1721505729.5598614
+DEBUG 2024-07-20 22:46:47,626 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/migrations/__init__.py first seen with mtime 1721505729.2348669
+DEBUG 2024-07-20 22:46:47,626 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/recorder.py first seen with mtime 1721505729.7288585
+DEBUG 2024-07-20 22:46:47,626 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/admin/migrations/0003_logentry_add_action_flag_choices.py first seen with mtime 1721505728.9808712
+DEBUG 2024-07-20 22:46:47,626 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0009_alter_user_last_name_max_length.py first seen with mtime 1721505729.175868
+DEBUG 2024-07-20 22:46:47,626 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/contenttypes/migrations/0002_remove_content_type_name.py first seen with mtime 1721505729.2348669
+DEBUG 2024-07-20 22:46:47,626 autoreload File /app/core/migrations/__init__.py first seen with mtime 1721511427.149637
+DEBUG 2024-07-20 22:46:47,626 autoreload File /usr/local/lib/python3.9/site-packages/django/db/migrations/loader.py first seen with mtime 1721505729.7278585
+DEBUG 2024-07-20 22:46:47,626 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/0012_alter_user_first_name_max_length.py first seen with mtime 1721505729.176868
+DEBUG 2024-07-20 22:46:47,627 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/migrations/__init__.py first seen with mtime 1721505729.176868
+INFO 2024-07-20 22:47:10,358 basehttp "GET / HTTP/1.1" 200 1258
+DEBUG 2024-07-20 22:47:10,847 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/storage/cookie.py first seen with mtime 1721505729.4528632
+DEBUG 2024-07-20 22:47:10,849 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/storage/session.py first seen with mtime 1721505729.4528632
+DEBUG 2024-07-20 22:47:10,849 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/sessions/serializers.py first seen with mtime 1721505729.5598614
+DEBUG 2024-07-20 22:47:10,850 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/auth/context_processors.py first seen with mtime 1721505729.1028693
+DEBUG 2024-07-20 22:47:10,850 autoreload File /usr/local/lib/python3.9/site-packages/django/template/context_processors.py first seen with mtime 1721505729.769858
+DEBUG 2024-07-20 22:47:10,850 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/context_processors.py first seen with mtime 1721505729.4508631
+DEBUG 2024-07-20 22:47:10,850 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/utils.py first seen with mtime 1721505729.4518633
+DEBUG 2024-07-20 22:47:10,851 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/storage/base.py first seen with mtime 1721505729.4528632
+DEBUG 2024-07-20 22:47:10,852 autoreload File /usr/local/lib/python3.9/site-packages/django/contrib/messages/storage/fallback.py first seen with mtime 1721505729.4528632
+DEBUG 2024-07-20 22:47:12,798 utils (0.002) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-07-20'::date LIMIT 21; args=(datetime.date(2024, 7, 20),)
+DEBUG 2024-07-20 22:47:12,800 utils (0.001) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-07-21'::date LIMIT 21; args=(datetime.date(2024, 7, 21),)
+DEBUG 2024-07-20 22:47:12,802 utils (0.001) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-07-27'::date LIMIT 21; args=(datetime.date(2024, 7, 27),)
+DEBUG 2024-07-20 22:47:12,805 utils (0.001) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-07-28'::date LIMIT 21; args=(datetime.date(2024, 7, 28),)
+DEBUG 2024-07-20 22:47:12,807 utils (0.001) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-08-03'::date LIMIT 21; args=(datetime.date(2024, 8, 3),)
+DEBUG 2024-07-20 22:47:12,810 utils (0.001) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-08-04'::date LIMIT 21; args=(datetime.date(2024, 8, 4),)
+DEBUG 2024-07-20 22:47:12,811 utils (0.000) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-08-10'::date LIMIT 21; args=(datetime.date(2024, 8, 10),)
+DEBUG 2024-07-20 22:47:12,813 utils (0.000) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-08-11'::date LIMIT 21; args=(datetime.date(2024, 8, 11),)
+DEBUG 2024-07-20 22:47:12,814 utils (0.000) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-08-17'::date LIMIT 21; args=(datetime.date(2024, 8, 17),)
+DEBUG 2024-07-20 22:47:12,816 utils (0.000) SELECT "core_dianaoutil"."id", "core_dianaoutil"."data", "core_dianaoutil"."descricao" FROM "core_dianaoutil" WHERE "core_dianaoutil"."data" = '2024-08-18'::date LIMIT 21; args=(datetime.date(2024, 8, 18),)
+DEBUG 2024-07-20 22:47:12,817 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,820 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-20'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 20), 2)
+DEBUG 2024-07-20 22:47:12,829 utils (0.008) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 66, "folga_nao_util" = 35, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 66, 35, '', 2)
+DEBUG 2024-07-20 22:47:12,830 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-20'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 20), 1)
+DEBUG 2024-07-20 22:47:12,832 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,834 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-20'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 20), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:12,835 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,836 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,838 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-21'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 21), 2)
+DEBUG 2024-07-20 22:47:12,841 utils (0.002) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 66, "folga_nao_util" = 36, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 66, 36, '', 2)
+DEBUG 2024-07-20 22:47:12,843 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-21'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 21), 1)
+DEBUG 2024-07-20 22:47:12,844 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,846 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-21'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 21), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:12,847 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,847 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,849 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-22'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 22), 2)
+DEBUG 2024-07-20 22:47:12,850 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 67, "folga_nao_util" = 36, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 67, 36, '', 2)
+DEBUG 2024-07-20 22:47:12,851 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-22'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 22), 1)
+DEBUG 2024-07-20 22:47:12,853 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,855 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-22'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 22), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,858 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,859 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,861 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-23'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 23), 2)
+DEBUG 2024-07-20 22:47:12,862 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 68, "folga_nao_util" = 36, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 68, 36, '', 2)
+DEBUG 2024-07-20 22:47:12,863 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-23'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 23), 1)
+DEBUG 2024-07-20 22:47:12,864 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,865 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-23'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 23), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,866 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,866 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,868 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-24'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 24), 2)
+DEBUG 2024-07-20 22:47:12,869 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 69, "folga_nao_util" = 36, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 69, 36, '', 2)
+DEBUG 2024-07-20 22:47:12,870 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-24'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 24), 1)
+DEBUG 2024-07-20 22:47:12,872 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,874 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-24'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 24), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,876 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,877 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,878 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-25'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 25), 2)
+DEBUG 2024-07-20 22:47:12,879 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 70, "folga_nao_util" = 36, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 70, 36, '', 2)
+DEBUG 2024-07-20 22:47:12,880 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-25'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 25), 1)
+DEBUG 2024-07-20 22:47:12,881 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,882 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-25'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 25), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,883 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,883 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,884 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-26'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 26), 2)
+DEBUG 2024-07-20 22:47:12,886 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 71, "folga_nao_util" = 36, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 71, 36, '', 2)
+DEBUG 2024-07-20 22:47:12,887 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-26'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 26), 1)
+DEBUG 2024-07-20 22:47:12,889 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,892 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-26'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 26), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,894 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,894 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,895 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-27'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 27), 2)
+DEBUG 2024-07-20 22:47:12,896 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 71, "folga_nao_util" = 37, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 71, 37, '', 2)
+DEBUG 2024-07-20 22:47:12,897 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-27'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 27), 1)
+DEBUG 2024-07-20 22:47:12,898 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,899 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-27'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 27), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:12,901 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,901 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,902 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-28'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 28), 2)
+DEBUG 2024-07-20 22:47:12,904 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 71, "folga_nao_util" = 38, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 71, 38, '', 2)
+DEBUG 2024-07-20 22:47:12,906 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-28'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 28), 1)
+DEBUG 2024-07-20 22:47:12,908 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,910 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-28'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 28), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:12,911 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,912 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,913 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-29'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 29), 2)
+DEBUG 2024-07-20 22:47:12,914 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 72, "folga_nao_util" = 38, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 72, 38, '', 2)
+DEBUG 2024-07-20 22:47:12,915 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-29'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 29), 1)
+DEBUG 2024-07-20 22:47:12,916 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,917 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-29'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 29), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,918 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,919 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,920 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-30'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 30), 2)
+DEBUG 2024-07-20 22:47:12,921 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 73, "folga_nao_util" = 38, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 73, 38, '', 2)
+DEBUG 2024-07-20 22:47:12,924 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-30'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 30), 1)
+DEBUG 2024-07-20 22:47:12,926 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,927 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-30'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 30), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,928 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,929 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,930 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-31'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 7, 31), 2)
+DEBUG 2024-07-20 22:47:12,931 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 74, "folga_nao_util" = 38, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 74, 38, '', 2)
+DEBUG 2024-07-20 22:47:12,932 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-07-31'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 7, 31), 1)
+DEBUG 2024-07-20 22:47:12,933 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,934 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-07-31'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 7, 31), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,935 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,936 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,937 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-01'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 1), 2)
+DEBUG 2024-07-20 22:47:12,938 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 75, "folga_nao_util" = 38, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 75, 38, '', 2)
+DEBUG 2024-07-20 22:47:12,940 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-01'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 1), 1)
+DEBUG 2024-07-20 22:47:12,942 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,943 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-01'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 1), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,944 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,944 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,945 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-02'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 2), 2)
+DEBUG 2024-07-20 22:47:12,947 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 76, "folga_nao_util" = 38, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 76, 38, '', 2)
+DEBUG 2024-07-20 22:47:12,947 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-02'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 2), 1)
+DEBUG 2024-07-20 22:47:12,948 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,950 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-02'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 2), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,953 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,955 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,958 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-03'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 3), 2)
+DEBUG 2024-07-20 22:47:12,961 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 76, "folga_nao_util" = 39, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 76, 39, '', 2)
+DEBUG 2024-07-20 22:47:12,962 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-03'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 3), 1)
+DEBUG 2024-07-20 22:47:12,964 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,966 utils (0.002) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-03'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 3), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:12,968 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,969 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,971 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-04'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 4), 2)
+DEBUG 2024-07-20 22:47:12,973 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 76, "folga_nao_util" = 40, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 76, 40, '', 2)
+DEBUG 2024-07-20 22:47:12,976 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-04'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 4), 1)
+DEBUG 2024-07-20 22:47:12,977 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,979 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-04'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 4), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:12,980 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,980 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,981 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-05'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 5), 2)
+DEBUG 2024-07-20 22:47:12,983 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 77, "folga_nao_util" = 40, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 77, 40, '', 2)
+DEBUG 2024-07-20 22:47:12,984 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-05'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 5), 1)
+DEBUG 2024-07-20 22:47:12,984 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,986 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-05'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 5), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,987 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,988 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,991 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-06'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 6), 2)
+DEBUG 2024-07-20 22:47:12,993 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 78, "folga_nao_util" = 40, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 78, 40, '', 2)
+DEBUG 2024-07-20 22:47:12,994 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-06'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 6), 1)
+DEBUG 2024-07-20 22:47:12,994 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:12,995 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-06'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 6), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:12,996 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:12,997 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:12,998 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-07'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 7), 2)
+DEBUG 2024-07-20 22:47:12,999 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 79, "folga_nao_util" = 40, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 79, 40, '', 2)
+DEBUG 2024-07-20 22:47:13,000 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-07'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 7), 1)
+DEBUG 2024-07-20 22:47:13,001 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,003 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-07'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 7), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,005 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,006 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,007 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-08'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 8), 2)
+DEBUG 2024-07-20 22:47:13,009 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 80, "folga_nao_util" = 40, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 80, 40, '', 2)
+DEBUG 2024-07-20 22:47:13,011 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-08'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 8), 1)
+DEBUG 2024-07-20 22:47:13,012 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,013 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-08'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 8), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,014 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,014 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,015 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-09'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 9), 2)
+DEBUG 2024-07-20 22:47:13,017 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 81, "folga_nao_util" = 40, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 81, 40, '', 2)
+DEBUG 2024-07-20 22:47:13,018 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-09'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 9), 1)
+DEBUG 2024-07-20 22:47:13,019 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,020 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-09'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 9), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,021 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,023 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,025 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-10'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 10), 2)
+DEBUG 2024-07-20 22:47:13,027 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 81, "folga_nao_util" = 41, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 81, 41, '', 2)
+DEBUG 2024-07-20 22:47:13,028 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-10'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 10), 1)
+DEBUG 2024-07-20 22:47:13,029 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,030 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-10'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 10), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:13,031 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,031 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,032 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-11'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 11), 2)
+DEBUG 2024-07-20 22:47:13,034 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 81, "folga_nao_util" = 42, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 81, 42, '', 2)
+DEBUG 2024-07-20 22:47:13,035 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-11'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 11), 1)
+DEBUG 2024-07-20 22:47:13,036 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,037 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-11'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 11), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:13,039 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,041 utils (0.001) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,043 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-12'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 12), 2)
+DEBUG 2024-07-20 22:47:13,044 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 82, "folga_nao_util" = 42, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 82, 42, '', 2)
+DEBUG 2024-07-20 22:47:13,045 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-12'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 12), 1)
+DEBUG 2024-07-20 22:47:13,046 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,047 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-12'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 12), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,049 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,049 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,050 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-13'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 13), 2)
+DEBUG 2024-07-20 22:47:13,051 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 83, "folga_nao_util" = 42, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 83, 42, '', 2)
+DEBUG 2024-07-20 22:47:13,052 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-13'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 13), 1)
+DEBUG 2024-07-20 22:47:13,053 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,055 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-13'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 13), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,057 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,058 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,059 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-14'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 14), 2)
+DEBUG 2024-07-20 22:47:13,060 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 84, "folga_nao_util" = 42, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 84, 42, '', 2)
+DEBUG 2024-07-20 22:47:13,061 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-14'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 14), 1)
+DEBUG 2024-07-20 22:47:13,062 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,063 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-14'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 14), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,064 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,064 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,065 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-15'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 15), 2)
+DEBUG 2024-07-20 22:47:13,066 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 85, "folga_nao_util" = 42, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 85, 42, '', 2)
+DEBUG 2024-07-20 22:47:13,067 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-15'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 15), 1)
+DEBUG 2024-07-20 22:47:13,068 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,069 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-15'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 15), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,071 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,071 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,072 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-16'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 16), 2)
+DEBUG 2024-07-20 22:47:13,073 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 86, "folga_nao_util" = 42, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 86, 42, '', 2)
+DEBUG 2024-07-20 22:47:13,074 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-16'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 16), 1)
+DEBUG 2024-07-20 22:47:13,075 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,076 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-16'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 16), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,077 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,078 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,079 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-17'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 17), 2)
+DEBUG 2024-07-20 22:47:13,080 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 86, "folga_nao_util" = 43, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 86, 43, '', 2)
+DEBUG 2024-07-20 22:47:13,081 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-17'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 17), 1)
+DEBUG 2024-07-20 22:47:13,082 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,083 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-17'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 17), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:13,084 utils (0.001) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,084 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,085 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-18'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 18), 2)
+DEBUG 2024-07-20 22:47:13,086 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 86, "folga_nao_util" = 44, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 86, 44, '', 2)
+DEBUG 2024-07-20 22:47:13,088 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-18'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 18), 1)
+DEBUG 2024-07-20 22:47:13,089 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,090 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-18'::date, 1, true, 'nao_util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 18), 1, True, 'nao_util', None)
+DEBUG 2024-07-20 22:47:13,091 utils (0.000) UPDATE "core_militar" SET "folga_nao_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+DEBUG 2024-07-20 22:47:13,091 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar"; args=()
+DEBUG 2024-07-20 22:47:13,092 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-19'::date AND "core_servicodiario"."militar_id" = 2) LIMIT 1; args=(datetime.date(2024, 8, 19), 2)
+DEBUG 2024-07-20 22:47:13,093 utils (0.001) UPDATE "core_militar" SET "nome" = '1º Ten Roduit', "tipo_escala" = 'Oficial de Dia', "status" = true, "data_entrada" = '2019-01-01'::date, "folga_util" = 87, "folga_nao_util" = 44, "indisponibilidades" = '' WHERE "core_militar"."id" = 2; args=('1º Ten Roduit', 'Oficial de Dia', True, datetime.date(2019, 1, 1), 87, 44, '', 2)
+DEBUG 2024-07-20 22:47:13,094 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE ("core_servicodiario"."data" = '2024-08-19'::date AND "core_servicodiario"."militar_id" = 1) LIMIT 1; args=(datetime.date(2024, 8, 19), 1)
+DEBUG 2024-07-20 22:47:13,094 utils (0.000) SELECT "core_militar"."id", "core_militar"."nome", "core_militar"."tipo_escala", "core_militar"."status", "core_militar"."data_entrada", "core_militar"."folga_util", "core_militar"."folga_nao_util", "core_militar"."indisponibilidades" FROM "core_militar" WHERE "core_militar"."status" ORDER BY "core_militar"."folga_util" ASC, "core_militar"."folga_nao_util" ASC; args=()
+DEBUG 2024-07-20 22:47:13,095 utils (0.001) INSERT INTO "core_servicodiario" ("tipo_escala", "data", "militar_id", "status", "tipo_dia", "observacoes") VALUES ('Oficial de Dia', '2024-08-19'::date, 1, true, 'util', NULL) RETURNING "core_servicodiario"."id"; args=('Oficial de Dia', datetime.date(2024, 8, 19), 1, True, 'util', None)
+DEBUG 2024-07-20 22:47:13,097 utils (0.001) UPDATE "core_militar" SET "folga_util" = 0 WHERE "core_militar"."id" = 1; args=(0, 1)
+INFO 2024-07-20 22:47:13,098 basehttp "GET /gerar-previsao/ HTTP/1.1" 200 1351
+DEBUG 2024-07-20 22:47:14,570 utils (0.001) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-20'::date LIMIT 1; args=(datetime.date(2024, 7, 20),)
+DEBUG 2024-07-20 22:47:14,570 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-21'::date LIMIT 1; args=(datetime.date(2024, 7, 21),)
+DEBUG 2024-07-20 22:47:14,571 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-22'::date LIMIT 1; args=(datetime.date(2024, 7, 22),)
+DEBUG 2024-07-20 22:47:14,572 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-23'::date LIMIT 1; args=(datetime.date(2024, 7, 23),)
+DEBUG 2024-07-20 22:47:14,572 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-24'::date LIMIT 1; args=(datetime.date(2024, 7, 24),)
+DEBUG 2024-07-20 22:47:14,573 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-25'::date LIMIT 1; args=(datetime.date(2024, 7, 25),)
+DEBUG 2024-07-20 22:47:14,573 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-26'::date LIMIT 1; args=(datetime.date(2024, 7, 26),)
+DEBUG 2024-07-20 22:47:14,573 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-27'::date LIMIT 1; args=(datetime.date(2024, 7, 27),)
+DEBUG 2024-07-20 22:47:14,574 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-28'::date LIMIT 1; args=(datetime.date(2024, 7, 28),)
+DEBUG 2024-07-20 22:47:14,574 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-29'::date LIMIT 1; args=(datetime.date(2024, 7, 29),)
+DEBUG 2024-07-20 22:47:14,575 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-30'::date LIMIT 1; args=(datetime.date(2024, 7, 30),)
+DEBUG 2024-07-20 22:47:14,575 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-07-31'::date LIMIT 1; args=(datetime.date(2024, 7, 31),)
+DEBUG 2024-07-20 22:47:14,576 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-01'::date LIMIT 1; args=(datetime.date(2024, 8, 1),)
+DEBUG 2024-07-20 22:47:14,576 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-02'::date LIMIT 1; args=(datetime.date(2024, 8, 2),)
+DEBUG 2024-07-20 22:47:14,577 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-03'::date LIMIT 1; args=(datetime.date(2024, 8, 3),)
+DEBUG 2024-07-20 22:47:14,577 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-04'::date LIMIT 1; args=(datetime.date(2024, 8, 4),)
+DEBUG 2024-07-20 22:47:14,578 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-05'::date LIMIT 1; args=(datetime.date(2024, 8, 5),)
+DEBUG 2024-07-20 22:47:14,578 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-06'::date LIMIT 1; args=(datetime.date(2024, 8, 6),)
+DEBUG 2024-07-20 22:47:14,579 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-07'::date LIMIT 1; args=(datetime.date(2024, 8, 7),)
+DEBUG 2024-07-20 22:47:14,579 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-08'::date LIMIT 1; args=(datetime.date(2024, 8, 8),)
+DEBUG 2024-07-20 22:47:14,580 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-09'::date LIMIT 1; args=(datetime.date(2024, 8, 9),)
+DEBUG 2024-07-20 22:47:14,580 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-10'::date LIMIT 1; args=(datetime.date(2024, 8, 10),)
+DEBUG 2024-07-20 22:47:14,581 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-11'::date LIMIT 1; args=(datetime.date(2024, 8, 11),)
+DEBUG 2024-07-20 22:47:14,581 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-12'::date LIMIT 1; args=(datetime.date(2024, 8, 12),)
+DEBUG 2024-07-20 22:47:14,582 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-13'::date LIMIT 1; args=(datetime.date(2024, 8, 13),)
+DEBUG 2024-07-20 22:47:14,582 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-14'::date LIMIT 1; args=(datetime.date(2024, 8, 14),)
+DEBUG 2024-07-20 22:47:14,583 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-15'::date LIMIT 1; args=(datetime.date(2024, 8, 15),)
+DEBUG 2024-07-20 22:47:14,583 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-16'::date LIMIT 1; args=(datetime.date(2024, 8, 16),)
+DEBUG 2024-07-20 22:47:14,584 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-17'::date LIMIT 1; args=(datetime.date(2024, 8, 17),)
+DEBUG 2024-07-20 22:47:14,584 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-18'::date LIMIT 1; args=(datetime.date(2024, 8, 18),)
+DEBUG 2024-07-20 22:47:14,585 utils (0.000) SELECT (1) AS "a" FROM "core_servicodiario" WHERE "core_servicodiario"."data" = '2024-08-19'::date LIMIT 1; args=(datetime.date(2024, 8, 19),)
+INFO 2024-07-20 22:47:14,587 basehttp "GET /atualizar-previsao/ HTTP/1.1" 200 1355
+INFO 2024-07-20 22:47:15,791 basehttp "GET / HTTP/1.1" 200 1258
+DEBUG 2024-07-20 22:50:28,378 autoreload File /app/escala_servico/settings.py previous mtime: 1721515605.4536757, current mtime: 1721515827.5904331
+DEBUG 2024-07-20 22:50:28,379 autoreload /app/escala_servico/settings.py notified as changed. Signal results: [(<function template_changed at 0x7dbdd1308a60>, None), (<function translation_file_changed at 0x7dbdd03e2f70>, None)].
+INFO 2024-07-20 22:50:28,379 autoreload /app/escala_servico/settings.py changed, reloading.
