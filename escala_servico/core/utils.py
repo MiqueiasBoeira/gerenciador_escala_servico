@@ -25,7 +25,6 @@ def adicionar_finais_de_semana_e_feriados(inicio, fim):
 from datetime import datetime, timedelta
 from core.models import Militar, ServicoDiario, DiaNaoUtil
 
-
 def gerar_previsao_servico():
     militares = Militar.objects.filter(status=True)
     hoje = datetime.now().date()
@@ -49,11 +48,14 @@ def gerar_previsao_servico():
                 calendario[militar.nome][dia]["tipo_dia"] = "útil"
                 calendario[militar.nome][dia]["folga"] = folgas[militar.nome]["folga_util"]
 
-        # Selecionar o militar com maior folga útil para o serviço
-        militar_escalado = max(militares, key=lambda m: folgas[m.nome]["folga_util"])
-        calendario[militar_escalado.nome][dia]["folga"] = 0  # Zerar a folga no dia do serviço
-        folgas[militar_escalado.nome]["folga_util"] = 0  # Resetar a folga útil do militar escalado
+        # Selecionar o militar com maior folga para o serviço (útil e não útil separados)
+        if dia_nao_util:
+            militar_escalado = max(militares, key=lambda m: folgas[m.nome]["folga_nao_util"])
+            calendario[militar_escalado.nome][dia]["folga"] = 0  # Zerar a folga no dia do serviço
+            folgas[militar_escalado.nome]["folga_nao_util"] = 0  # Resetar a folga não útil do militar escalado
+        else:
+            militar_escalado = max(militares, key=lambda m: folgas[m.nome]["folga_util"])
+            calendario[militar_escalado.nome][dia]["folga"] = 0  # Zerar a folga no dia do serviço
+            folgas[militar_escalado.nome]["folga_util"] = 0  # Resetar a folga útil do militar escalado
 
     return calendario
-
-
