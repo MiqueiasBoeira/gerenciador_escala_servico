@@ -40,6 +40,7 @@ class ServicoDiario(models.Model):
     militar = models.ForeignKey(Militar, on_delete=models.CASCADE)
     status = models.BooleanField(default=True)
     tipo_dia = models.CharField(max_length=10, choices=TIPO_DIA_CHOICES)
+    folga = models.IntegerField(default=0)
     observacoes = models.TextField(blank=True, null=True)
 
     def __str__(self):
@@ -54,3 +55,8 @@ class DiaNaoUtil(models.Model):
     def __str__(self):
         return f'{self.data} - {self.descricao}'
 
+class FolgaDiaria(models.Model):
+    data = models.DateField()
+    militar = models.ForeignKey(Militar, on_delete=models.CASCADE)
+    folga = models.IntegerField()
+    tipo_dia = models.CharField(max_length=10)  # útil ou não útil

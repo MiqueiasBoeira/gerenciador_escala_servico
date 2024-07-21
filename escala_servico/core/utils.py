@@ -1,5 +1,7 @@
 from datetime import date, timedelta
 from .models import DiaNaoUtil, Militar, ServicoDiario
+import calendar
+
 
 def adicionar_finais_de_semana_e_feriados(inicio, fim):
     dia_atual = inicio
@@ -18,69 +20,40 @@ def adicionar_finais_de_semana_e_feriados(inicio, fim):
         dia_atual += timedelta(days=1)
 
 
+
 # utils.py atualizado
 from datetime import datetime, timedelta
 from core.models import Militar, ServicoDiario, DiaNaoUtil
 
 
 def gerar_previsao_servico():
-    # Pegando todos os militares da escala de Oficial de Dia
-    militares = Militar.objects.filter(status=True, tipo_escala='Oficial de Dia').order_by('-folga_util', '-folga_nao_util')
+    militares = Militar.objects.filter(status=True)
     hoje = datetime.now().date()
-    previsao_ate = hoje + timedelta(days=30)
+    _, ultimo_dia = calendar.monthrange(hoje.year, hoje.month)
+    dias_mes = [hoje.replace(day=dia) for dia in range(1, ultimo_dia + 1)]
 
-    # Inicializando folgas nulas como zero
-    for militar in militares:
-        militar.folga_util = 0 if militar.folga_util is None else militar.folga_util
-        militar.folga_nao_util = 0 if militar.folga_nao_util is None else militar.folga_nao_util
+    calendario = {militar.nome: {dia: {"folga": 0, "tipo_dia": "útil"} for dia in dias_mes} for militar in militares}
 
-    print(f"Militares iniciais: {[f'{m.nome} (folga útil: {m.folga_util}, folga não útil: {m.folga_nao_util})' for m in militares]}")
+    # Inicializar as folgas com valores atuais
+    folgas = {militar.nome: {"folga_util": militar.folga_util, "folga_nao_util": militar.folga_nao_util} for militar in militares}
 
-    # Gerando a previsão
-    for dia in range((previsao_ate - hoje).days):
-        data = hoje + timedelta(days=dia)
-        tipo_dia = 'útil' if data.weekday() < 5 else 'não útil'
-        dia_nao_util = DiaNaoUtil.objects.filter(data=data).exists()
-        if dia_nao_util:
-            tipo_dia = 'não útil'
-
-        # Gerar previsão apenas para Oficial de Dia
-        tipo_escala = 'Oficial de Dia'
-        # Filtrar militares com folga maior que zero
-        militares_disponiveis = [m for m in militares if (m.folga_util > 0 if tipo_dia == 'útil' else m.folga_nao_util > 0)]
-
-        if not militares_disponiveis:
-            # Se nenhum militar tem folga > 0, selecionar o primeiro da lista original
-            militar_designado = militares[0]
-        else:
-            # Selecionar o militar com maior folga disponível
-            militar_designado = militares_disponiveis[0]
-
-        ServicoDiario.objects.create(
-            tipo_escala=tipo_escala,
-            data=data,
-            militar=militar_designado,
-            status=True,
-            tipo_dia=tipo_dia
-        )
-
-        print(f"Designado: {militar_designado.nome} para {tipo_escala} em {data} (tipo de dia: {tipo_dia})")
-
-        # Zerando a folga do militar de serviço e incrementando a folga dos outros
+    for dia in dias_mes:
+        dia_nao_util = DiaNaoUtil.objects.filter(data=dia).exists()
         for militar in militares:
-            if militar == militar_designado:
-                if tipo_dia == 'útil':
-                    militar.folga_util = 0
-                else:
-                    militar.folga_nao_util = 0
+            if dia_nao_util:
+                folgas[militar.nome]["folga_nao_util"] += 1
+                calendario[militar.nome][dia]["tipo_dia"] = "não útil"
+                calendario[militar.nome][dia]["folga"] = folgas[militar.nome]["folga_nao_util"]
             else:
-                if tipo_dia == 'útil':
-                    militar.folga_util += 1
-                else:
-                    militar.folga_nao_util += 1
+                folgas[militar.nome]["folga_util"] += 1
+                calendario[militar.nome][dia]["tipo_dia"] = "útil"
+                calendario[militar.nome][dia]["folga"] = folgas[militar.nome]["folga_util"]
 
-        # Reordenando a lista de militares
-        militares = sorted(militares, key=lambda m: (m.folga_util, m.folga_nao_util), reverse=True)
-        print(f"Militares atualizados: {[f'{m.nome} (folga útil: {m.folga_util}, folga não útil: {m.folga_nao_util})' for m in militares]}")
+        # Selecionar o militar com maior folga útil para o serviço
+        militar_escalado = max(militares, key=lambda m: folgas[m.nome]["folga_util"])
+        calendario[militar_escalado.nome][dia]["folga"] = 0  # Zerar a folga no dia do serviço
+        folgas[militar_escalado.nome]["folga_util"] = 0  # Resetar a folga útil do militar escalado
 
-    return "Previsão de serviço gerada com sucesso"
+    return calendario
+
+
