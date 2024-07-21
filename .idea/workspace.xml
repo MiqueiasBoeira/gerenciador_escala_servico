@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abac0fb6-eb9b-4475-82b2-5040c901de2d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/escala_servico/core/management/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escala_servico/core/management/commands/popular_folga_diaria.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escala_servico/core/migrations/0002_auto_20240720_2354.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escala_servico/core/migrations/0003_auto_20240720_2358.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/escala_servico/core/migrations/0004_folgadiaria.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/escala_servico/core/management/commands/popular_dias_nao_uteis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/templates/core/visualizar_previsao.html" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/templates/core/visualizar_previsao.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/escala_servico/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/escala_servico/core/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
